@@ -1,0 +1,608 @@
+@charset "UTF-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/*모바일 버전*/
+@media (max-width:600px) {
+  .pcNav {
+    display: none;
+  }
+
+  .bar {
+    display: none;
+  }
+
+  /*header*/
+  header {
+    width: 100%;
+    font-family: "Volkhov", serif;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  header h1 {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+  header h1 img {
+    width: 110px;
+  }
+
+  /*bars*/
+  header .bars {
+    height: 100%;
+    padding-right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /*moNav*/
+  .moNav {
+    width: 80%;
+    height: 100vh;
+    background-color: #212956;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    line-height: 2.2rem;
+    padding: 4rem 0rem;
+    z-index: 20;
+    display: none;
+
+  }
+
+  /*gnb_m*/
+  .moNav>.gnb01>li>.gnb_m {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-bottom: 0.2px solid#dbdada;
+  }
+
+  /*icon*/
+  .moNav>.gnb01>li>.gnb_m>.icon {
+    color: #fff;
+    position: relative;
+  }
+
+  .moNav>.gnb01>li>.gnb_m>.icon>.minus2 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: rotate(90deg);
+  }
+
+  .minus2.on {
+    display: none;
+  }
+
+  /*name*/
+  .name.on {
+    display: none;
+  }
+
+  /*xmarks*/
+  header .xmarks {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 25px
+  }
+
+  /*header name01*/
+  header .name01 {
+    font-size: 0.8rem;
+    background-color: #fff;
+    box-shadow: inset 0px 3px 9px rgba(0, 0, 0, 0.3);
+    padding-left: 1rem;
+    display: none;
+  }
+
+  header .name01 a {
+    color: darkgray;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+
+  /*modalBox*/
+  #modalBox a {
+    color: #222;
+  }
+
+  #modalBox {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    color: #222;
+    display: none;
+  }
+
+  #modalBox.on {
+    display: flex;
+  }
+
+  #modalContent {
+    display: none;
+  }
+
+  /*visual*/
+  #visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  #visual .bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/main/visual.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*visual txt*/
+  #visual .txt {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #visual .txt>p {
+    font-size: 4vw;
+  }
+
+  #visual .txt>.cake {
+    font-family: "Volkhov", serif;
+  }
+
+  #visual .txt>.cakecafe {
+    font-weight: bold;
+  }
+
+  #visual .txt>h2 {
+    font-size: 12vw;
+    margin: 1rem 0rem 2rem;
+    font-family: "Volkhov", "Nanum Gothic", serif;
+  }
+
+}
+
+/*태블릿 버전*/
+@media (min-width: 600px) and (max-width: 1220px) {
+  .pcNav {
+    display: none;
+  }
+
+  .bar {
+    display: none;
+  }
+
+  /*header*/
+  header {
+    width: 100%;
+    font-family: "Volkhov", serif;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+  }
+
+  header h1 {
+    width: 100%;
+    height: 100%;
+    padding-top: 0.5rem;
+    padding-left: 1.5rem;
+  }
+
+  header h1 img {
+    width: 110px;
+  }
+
+  /*bars*/
+  header .bars {
+    height: 100%;
+    padding-right: 2rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /*moNav*/
+  .moNav {
+    width: 30%;
+    height: 100vh;
+    background-color: #212956;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    line-height: 2.2rem;
+    padding: 4rem 0rem;
+    z-index: 20;
+    display: none;
+
+  }
+
+  /*gnb_m*/
+  .moNav>.gnb01>li>.gnb_m {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border-bottom: 0.2px solid#dbdada;
+  }
+
+  /*icon*/
+  .moNav>.gnb01>li>.gnb_m>.icon {
+    color: #fff;
+    position: relative;
+  }
+
+  .moNav>.gnb01>li>.gnb_m>.icon>.minus2 {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    transform: rotate(90deg);
+  }
+
+  .minus2.on {
+    display: none;
+  }
+
+  /*name*/
+  .name.on {
+    display: none;
+  }
+
+
+
+  /*xmarks*/
+  header .xmarks {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 25px
+  }
+
+  /*header name01*/
+  header .name01 {
+    font-size: 0.8rem;
+    background-color: #fff;
+    box-shadow: inset 0px 3px 9px rgba(0, 0, 0, 0.3);
+    padding-left: 1rem;
+    display: none;
+  }
+
+  header .name01 a {
+    color: darkgray;
+    font-family: "Noto Sans KR", sans-serif;
+  }
+
+
+  /*modalBox*/
+  #modalBox a {
+    color: #222;
+  }
+
+  #modalBox {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    flex-direction: column;
+    justify-content: center;
+    color: #222;
+    display: none;
+  }
+
+  #modalBox.on {
+    display: flex;
+  }
+
+  #modalContent {
+    display: none;
+  }
+
+  /*visual*/
+  #visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  #visual .bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/main/visual.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*visual txt*/
+  #visual .txt {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #visual .txt>p {
+    font-size: 1.5rem;
+  }
+
+  #visual .txt>.cake {
+    font-family: "Volkhov", serif;
+  }
+
+  #visual .txt>.cakecafe {
+    font-weight: bold;
+  }
+
+  #visual .txt>h2 {
+    font-size: 5.2rem;
+    margin: 1rem 0rem 2rem;
+    font-family: "Volkhov", "Nanum Gothic", serif;
+  }
+
+}
+
+/*pc 버전*/
+@media (min-width: 1220px) {
+
+  .moNav {
+    display: none;
+  }
+
+  .bars {
+    display: none;
+  }
+
+  /*header*/
+  header {
+    width: 100%;
+    height: 90px;
+    font-family: "Volkhov", serif;
+    position: fixed;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    padding: 0px 2rem;
+    box-sizing: border-box;
+  }
+
+  header h1 img {
+    width: 110px;
+  }
+
+  /*bar*/
+  header .bar {
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /*.pcNav*/
+  header>.pcNav {
+    width: 50%;
+    height: 100%;
+    line-height: 90px;
+  }
+
+  header .pcNav>ul {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .gnb>li>a {
+    display: block;
+  }
+
+  .gnb li a:hover {
+    background-color: #212956;
+    display: block;
+  }
+
+  header .pcNav>ul>li {
+    width: 100%;
+  }
+
+  header .name {
+    font-size: 0.8rem;
+    background-color: #fff;
+    display: none;
+  }
+
+  header .name a {
+    color: #333;
+  }
+
+  header .cf>a {
+    display: block;
+    height: 90px;
+    padding-top: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  header .cf a:hover {
+    background-color: #212956;
+    display: block;
+  }
+
+  header .cf img {
+    vertical-align: auto;
+  }
+
+  /*modalBox*/
+  #modalBox a {
+    color: #222;
+  }
+
+  #modalBox {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    color: #222;
+
+  }
+
+  #modalBox.on {
+    display: flex;
+  }
+
+  /*modalContent*/
+  #modalContent {
+    width: 70%;
+    height: 350px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+  }
+
+  #modalContent h3 {
+    background-color: #212956;
+    color: #fff;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+  }
+
+  #modalContent>.close {
+    position: absolute;
+    right: 20px;
+    top: 5px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  #modalContent>ul {
+    display: flex;
+    z-index: 20;
+    width: 100%;
+  }
+
+  #modalContent>ul>li {
+    width: 100%;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  #modalContent ul>li>h4 {
+    border-bottom: 1px solid#222;
+    padding: 1rem;
+  }
+
+  #modalContent ul>li>p {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+
+  #modalBox a:hover {
+    border-bottom: 1px solid#222;
+  }
+
+  /*visual*/
+  #visual {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  #visual .bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/main/visual.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /*visual txt*/
+  #visual .txt {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  #visual .txt>p {
+    font-size: 1.5rem;
+  }
+
+  #visual .txt>.cake {
+    font-family: "Volkhov", serif;
+  }
+
+  #visual .txt>.cakecafe {
+    font-weight: bold;
+  }
+
+  #visual .txt>h2 {
+    font-size: 5.2rem;
+    margin: 1rem 0rem 2rem;
+    font-family: "Volkhov", "Nanum Gothic", serif;
+  }
+}
