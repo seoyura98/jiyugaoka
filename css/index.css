@@ -3498,9 +3498,6 @@ header.in {
 
   /*first_wrap*/
 
-  .con03 .first_wrap {
-  }
-
   .con03 .first_img {
     width: 100%;
     height: 100%;
@@ -3521,10 +3518,6 @@ header.in {
 
   .con03_mo {
     display: none;
-  }
-
-  /*last_wrap*/
-  .con03 .last_wrap {
   }
 
   .con03 .last_img {
