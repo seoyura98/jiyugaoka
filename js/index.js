@@ -226,7 +226,8 @@ $(function () {
     $(".con06_bgZip > li:last-child").prependTo(".con06_bgZip");
     $(".con06_bgZip").css({ "margin-left": "-100%" });
     $(".con06_bgZip").stop().animate({ "margin-left": "0px" });
-
+    $("#con06_navi li").removeClass("on");
+    $("#con06_navi li").eq(j).addClass("on");
     slide();
   });
 
