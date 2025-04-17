@@ -139,7 +139,6 @@ header.in {
     top: 0px;
     transform: rotate(90deg);
   }
-
   .minus2.on {
     display: none;
   }
@@ -3065,6 +3064,7 @@ header.in {
 
   .gnb li a:hover {
     display: block;
+    background-color: #212956;
   }
 
   header .pcNav > ul > li {
